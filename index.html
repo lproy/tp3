@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header" role="banner">
+        <picture>
+            <source media="(max-width:600px)" srcset="images/bandeau_600.jpg">
+            <source media="(min-width:601px)" srcset="images/bandeau_1200.jpg">
+            <img src="images/bandeau_1200.jpg"
+                alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
+        </picture>
+    </header>
+    <main class="main">
+        <h1 class="h1">Contact</h1>
+        <article>
+            <fieldset>
+                <legend>
+                    <h2>Coupon de participation</h2>
+                </legend>
+                <fieldset>
+                    <legend>Nom complet</legend>
+                    <div>
+                        <label for="prenom">Prénom</label>
+                        <input type="text" name="prenom" id="prenom" required />
+                    </div>
+                    <div>
+                        <label for="prenom">Nom</label>
+                        <input type="text" name="nom" id="nom" required />
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="adresse">Adresse</label>
+                    <input type="email" name="adresse" id="adresse" required />
+                </div>
+                <div>
+                    <label for="ville">Ville</label>
+                    <input type="text" name="ville" id="ville" required />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Sujet</legend>
+                <textarea name="sujet" id="sujet">Racontez...</textarea>
+            </fieldset>
+            </fieldset>
+            <form>
+                <input type="submit" value="Envoyer">
+            </form>
+        </article>
+    </main>
+
+</body>
+
+</html>
