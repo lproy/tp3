@@ -23,7 +23,7 @@
 
 /* Utilitaires
    ========================================================================== */
- 
+   @import url(_utilitaires.css);
 
 /* Charte typographique
    ========================================================================== */
@@ -31,8 +31,47 @@
 
 /* Grille
    ========================================================================== */
- 
+@import url(_grille.css);
 
 /* Mise en page
    ========================================================================== */
- 
+   ul.rangee{
+      list-style: none;
+      padding-left: 0;
+  }
+
+  input[type=text], input[type=email], input[type=tel], input[type=number], select {
+     width: 100%;
+     padding: 0.5rem;
+     border-radius: 0.5rem;
+  }
+  :focus {
+   outline: #276062 auto 5px;
+  }
+  /*** Label des boutons radio ***/
+/* le sélecteur met à profit
+le fait que le label est consécutif
+au input (cas des boutons radio et des cases à cocher)
+ */
+input[type=radio]+label {
+   display: inline-block;  
+   text-align: center;
+   filter: grayscale();
+   border:2px solid transparent;
+}
+/*** Interactivité ***/
+[type=radio]:hover+label { 
+   cursor: pointer;
+}
+[type=radio]:checked+label { 
+   border:2px solid #000000; 
+   filter: grayscale(100%);
+}
+
+  input[type=radio]:focus + label { 
+   filter: grayscale(100%);
+  }
+  input[type=radio]:focus + label img {
+   filter: grayscale(100%);
+
+  }
