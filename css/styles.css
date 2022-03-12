@@ -19,19 +19,19 @@
 
 /* Normalize
    ========================================================================== */
-@import url(normalize.css);
+@import url(_normalize.css);
 
 /* Utilitaires
    ========================================================================== */
-   @import url(utilitaires.css);
+   @import url(_utilitaires.css);
 
 /* Charte typographique
    ========================================================================== */
  
-   @import url(tp3_typo.css);
+   @import url(_tp3_typo.css);
 /* Grille
    ========================================================================== */
-@import url(grille.css);
+   @import url(_grille.css);
 
 /* Mise en page
    ========================================================================== */
