@@ -28,50 +28,117 @@
 /* Charte typographique
    ========================================================================== */
  
-
+   @import url(tp3_typo.css);
 /* Grille
    ========================================================================== */
 @import url(_grille.css);
 
 /* Mise en page
    ========================================================================== */
-   ul.rangee{
+   /* *** entête */
+   .titre {
+      width: 100%;
+      padding: var(--padding-text);
+      margin-bottom: 0;
+   }
+   /* *** main */
+   main {
+      background-color: white;
+      padding-top: 2rem;
+   }
+   .intro {
+      background-color: rgba(255,255,255,0.6);
+      padding: var(--padding-text);
+      border-radius: 1rem;
+  }
+   :root {
+      --padding-text: 1rem;
+      --couleur-principale: #93c9b7;
+      --couleur-secondaire: #b9dfc3;
+      --couleur-tertiaire: #fbffea;
+  }
+   body {
+      margin: 0;
+      background-color: var(--couleur-secondaire);
+      background-image: linear-gradient(var(--couleur-principale) 10%,var(--couleur-secondaire) 15%,var(--couleur-tertiaire));
+    }
+    body {
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 1.375;
+  }
+  @media (min-width: 600px){
+     body {
+      line-height: 1.5;
+   }
+}
+/* *** formulaire */
+.telephone p:nth-of-type(2) {
+   text-align: center;
+}
+.tiret {
+   font-family: NewsCycle-bold,sans-serif;
+   padding: 0.5rem;
+}
+.ctnValidation {
+   margin: 1.5rem 0;
+}
+input[type=text], input[type=email], input[type=tel], input[type=number], select {
+   width: 100%;
+   padding: 0.5rem;
+   border-radius: 0.5rem;
+}
+input#annee,
+input#jour {
+   padding: 0.85rem;
+}
+
+
+/* *** interactivité */
+    
+   ul.sanspuces{
       list-style: none;
       padding-left: 0;
   }
-
-  input[type=text], input[type=email], input[type=tel], input[type=number], select {
-     width: 100%;
-     padding: 0.5rem;
-     border-radius: 0.5rem;
-  }
   :focus {
-   outline: #276062 auto 5px;
+   outline: #349194 auto 5px;
   }
+
   /*** Label des boutons radio ***/
 /* le sélecteur met à profit
 le fait que le label est consécutif
 au input (cas des boutons radio et des cases à cocher)
  */
-input[type=radio]+label {
-   display: inline-block;  
-   text-align: center;
-   filter: grayscale();
-   border:2px solid transparent;
+ [type=radio]+label {
+   border: 1px solid transparent;
+   display: inline-block;
+   padding: 0.25rem;
 }
 /*** Interactivité ***/
-[type=radio]:hover+label { 
+[type=radio]:hover+label img{ 
    cursor: pointer;
+   filter: grayscale(0);
 }
 [type=radio]:checked+label { 
    border:2px solid #000000; 
-   filter: grayscale(100%);
+   filter: grayscale(0);
 }
-
-  input[type=radio]:focus + label { 
-   filter: grayscale(100%);
-  }
-  input[type=radio]:focus + label img {
-   filter: grayscale(100%);
-
-  }
+[type=radio]:checked + label img {
+   filter: grayscale(0);
+}
+[type=radio]+label img {
+   filter: grayscale(1);
+}
+/*  *** footer */
+footer {
+   padding: 5rem;
+}
+footer {
+   display: block;
+}
+.reglement, .documentation, .soumission {
+    padding-left: 2rem;
+}
+.credits {
+   text-align: center;
+}

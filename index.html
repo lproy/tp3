@@ -11,37 +11,47 @@
 </head>
 
 <body>
-    <header id="header" role="banner">
-        <picture>
-            <source media="(max-width:600px)" srcset="images/bandeau_600.jpg">
-            <source media="(min-width:601px)" srcset="images/bandeau_1200.jpg">
-            <img src="images/bandeau_1200.jpg"
-                alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
-        </picture>
-    </header>
-    <main class="main">
-        <h1 class="h1">Contact</h1>
-        <p>Complétez le coupon de participation et répondez à la question du jour ci- dessous.</p>
-        <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner
-            préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la
-            destination de son choix!</p>
-        <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
-        <section>
-            <form>
+    <div class="conteneur">
+        <header id="header" role="banner">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/bandeau_600.jpg">
+                <source media="(min-width:600px)" srcset="images/bandeau_1200.jpg">
+                <img src="images/bandeau_600.jpg"
+                    alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
+            </picture>
+        </header>
+        <main class="rangee" class="main">
+            <h1 class="titre">Concours</h1>
+            <aside class="intro cols_4_de_12" role="complementary">
+                <p>
+                    Complétez le coupon de participation et répondez à la question du jour ci- dessous.
+                </p>
+                <p>
+                    30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit
+                    déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant
+                    s’envolera vers la
+                    destination de son choix!
+                </p>
+                <p>
+                    Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!
+                </p>
+            </aside>
+            <form action="index.html" class="fconcours cols_8_de_12" role="form">
                 <fieldset>
-                    <legend>
-                        <h2>Coupon de participation</h2>
-                    </legend>
+                    <legend><h2>Coupon de participation</h2></legend>
                     <fieldset class="nomcomplet ctnValidation">
-                        <legend>Nom complet</legend>
+                        <legend class="h4">Nom complet</legend>
                         <div class="rangee">
-                            <p class="cols_4_de_12">
+                            <p class="cols_6_de_12">
                                 <label for="prenom">Prénom</label>
-                                <input type="text" name="prenom" id="prenom" pattern="[a-zA-ZÀ-ÿ \-]+" required />
+                                <input type="text" name="prenom" id="prenom" required pattern="[a-zA-ZÀ-ÿ \-]+"
+                                    title="Caractères alphanumériques francais seulement">
                             </p>
-                            <p class="cols_4_de_12">
+                            <p class="cols_6_de_12">
                                 <label for="prenom">Nom</label>
-                                <input type="text" name="nom" id="nom" required />
+                                <input type="text" name="nom" id="nom" required
+                                    pattern="[A-ZÇÄÅÉÖÜÑÁÂÀÃÊËÈÍÎÏÌÓÔÒÕÚÛÙÝ][a-zA-ZÀ-ÿ '\-]{1,29}"
+                                    title="Caractères alphanumériques francais seulement">
                             </p>
                         </div>
                         <p class="erreur">
@@ -55,7 +65,7 @@
                     <div class="adresse ctnValidation">
                         <p>
                             <label for="adresse">Adresse</label>
-                            <input type="adresse" name="adresse" id="adresse" required />
+                            <input type="text" name="adresse" id="adresse" required />
                         </p>
                         <p class="erreur">
                             <span>
@@ -161,11 +171,12 @@
                             La province ou l’état d’origine doit être précisé.
                         </p>
                     </div>
-                    <div class="code-postale ctnValidation">
+                    <div class="code-postal ctnValidation">
                         <p>
-                            <label for="code-postale">Code postale</label>
-                            <input type="text" name="codePostale" id="codePostale"
-                                pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required />
+                            <label for="code-postale">Code postale (X1X 1X1)</label>
+                            <input type="text" name="codePostale" id="codePostale" required
+                                pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                                title="Chaîne de six caractères comportant 3 caractères alphanumériques francais et 3 nombre">
                         </p>
                         <p class="erreur">
                             <span>
@@ -177,8 +188,8 @@
                     </div>
                     <div class="courriel ctnValidation">
                         <p>
-                            <label for="Courriel">Courriel</label>
-                            <input type="email" name="courriel" id="courriel" required />
+                            <label for="courriel">Courriel</label>
+                            <input type="email" name="courriel" id="courriel" required>
                         </p>
                         <p class="erreur">
                             <span>
@@ -189,16 +200,16 @@
                         </p>
                     </div>
                     <fieldset class="telephone ctnValidation">
-                        <legend>Téléphone (indicatif - numéro)</legend>
+                        <legend class="h4">Téléphone (indicatif - numéro)</legend>
                         <div class="rangee">
-                            <p>
+                            <p class="cols_3_de_12">
                                 <label for="indicatif">Indicatif</label>
-                                <input type="tel" name="indicatif" id="indicatif" required />
+                                <input type="tel" name="indicatif" id="indicatif" required maxlength="3">
                             </p>
-                            <p>-</p>
-                            <p>
+                            <p class="cols_1_de_12 tiret">-</p>
+                            <p class="cols_8_de_12">
                                 <label for="numero">Numéro</label>
-                                <input type="tel" name="numero" id="numero" required />
+                                <input type="tel" name="numero" id="numero" required maxlength="7">
                             </p>
                         </div>
                         <p class="erreur">
@@ -210,39 +221,37 @@
                         </p>
                     </fieldset>
                 </fieldset>
-                </fieldset>
                 <fieldset>
-                    <legend>
-                        <h2>Question du jour</h2>
-                    </legend>
-                    <fieldset>
-                        <legend>Date à laquelle la question a été posée?</legend>
-                        <div class="date ctnValidation">
+                    <legend><h2>Question du jour</h2></legend>
+                    <fieldset class="date ctnValidation">
+                        <legend class="h4">
+                            Date à laquelle la question a été posée?
+                        </legend>
+                        <div class="rangee">
                             <p class="cols_4_de_12">
                                 <label for="jour">Jour</label>
-                                <input type="text" name="jour" id="jour" required />
+                                <input type="number" name="jour" id="jour" required min="1" max="31">
                             </p>
                             <p class="cols_4_de_12">
                                 <label for="mois">Mois</label>
                                 <select name="mois" id="mois" required>
                                     <option value="">Sélectionner</option>
-                                    <option value="JA">Janvier</option>
-                                    <option value="FE">Février</option>
-                                    <option value="MR">Mars</option>
-                                    <option value="AL">Avril</option>
-                                    <option value="MA">Mai</option>
-                                    <option value="JN">Juin</option>
-                                    <option value="JL">Juillet</option>
-                                    <option value="AU">Août</option>
-                                    <option value="SE">Septembre</option>
-                                    <option value="OC">Octobre</option>
-                                    <option value="NO">Novembre</option>
-                                    <option value="DE">Décembre</option>
+                                    <option value="01">Janvier</option>
+                                    <option value="02">Février</option>
+                                    <option value="03">Mars</option>
+                                    <option value="04">Avril</option>
+                                    <option value="05">Mai</option>
+                                    <option value="06">Juin</option>
+                                    <option value="07">Juillet</option>
+                                    <option value="08">Août</option>
+                                    <option value="09">Septembre</option>
+                                    <option value="10">Octobre</option>
+                                    <option value="11">Novembre</option>
+                                    <option value="12">Décembre</option>
                                 </select>
                             </p>
-                            <p class="cols_4_de_12">
-                                <label for="annee">Année</label>
-                                <input type="text" name="annee" id="annee" required />
+                            <p class="cols_4_de_12"><label for="annee">Année</label>
+                                <input type="number" name="annee" id="annee" required min="2022" max="2023">
                             </p>
                             <p class="erreur">
                                 <span>
@@ -254,40 +263,40 @@
                         </div>
                     </fieldset>
                     <fieldset class="question ctnValidation">
-                        <legend>Lequel de ces monuments est un mausolée?</legend>
-                        <ul class="rangee">
+                        <legend class="h4">Lequel de ces monuments est un mausolée?</legend>
+                        <ul class="sanspuces rangee">
                             <li class="cols_4_de_12">
                                 <input name="monuments" id="leChateauIf" type="radio" value="leChateauIf"
-                                    class="screen-reader-only" required />
+                                    class="screen-reader-only" required>
                                 <label for="leChateauIf">
                                     <picture>
-                                        <source src="/images/chateaudIf-small.jpg" media="(max-width:600px)">
-                                        <source src="/images/chateaudIf.jpg" media="(min-width:601px">
-                                        <img src="/images/chateaudIf.jpg" alt="Château d'If">
+                                        <source src="/images/chateaudIf-small.jpg" media="(max-width:599px)">
+                                        <source src="/images/chateaudIf.jpg" media="(min-width:600px)">
+                                        <img src="/images/chateaudIf.jpg" alt="">
                                     </picture>
                                     <span>Le château d'If</span>
                                 </label>
                             </li>
                             <li class="cols_4_de_12">
                                 <input name="monuments" id="lePalaisDuLuxembourg" type="radio"
-                                    value="lePalaisDuLuxembourg" class="screen-reader-only" required />
+                                    value="lePalaisDuLuxembourg" class="screen-reader-only">
                                 <label for="lePalaisDuLuxembourg">
                                     <picture>
-                                        <source src="/images/palaisluxembourg-small.jpg" media="(max-width:600px">
-                                        <source src="/images/palaisluxembourg.jpg" media="(min-width:601px">
-                                        <img src="/images/palaisluxembourg.jpg" alt="Palais Luxembourg">
+                                        <source src="/images/palaisluxembourg-small.jpg" media="(max-width:599px)">
+                                        <source src="/images/palaisluxembourg.jpg" media="(min-width:600px)">
+                                        <img src="/images/palaisluxembourg.jpg" alt="">
                                     </picture>
                                     <span>Le palais du Luxembourg</span>
                                 </label>
                             </li>
                             <li class="cols_4_de_12">
                                 <input name="monuments" id="leTajMahal" type="radio" value="leTajMahal"
-                                    class="screen-reader-only" required />
+                                    class="screen-reader-only">
                                 <label for="leTajMahal">
                                     <picture>
-                                        <source src="/images/tajmahal-small.jpg" media="(max-width:600px">
-                                        <source src="/images/tajmahal.jpg" media="(min-width:601px">
-                                        <img src="/images/tajmahal.jpg" alt="Tajmahal">
+                                        <source src="/images/tajmahal-small.jpg" media="(max-width:599px)">
+                                        <source src="/images/tajmahal.jpg" media="(min-width:600px)">
+                                        <img src="/images/tajmahal.jpg" alt="">
                                     </picture>
                                     <span>Le Taj Mahal</span>
                                 </label>
@@ -304,7 +313,7 @@
                 </fieldset>
                 <div class="reglement ctnValidation">
                     <p>
-                        <input type="checkbox" id="confirme" name="confirme" value="confirme" required />
+                        <input type="checkbox" id="confirme" name="confirme" required>
                         <label for="confirme">J'ai lu et j'accepte le <a
                                 href="/pdf/Reglements-Voyage-De-Reve-Au-Menu.pdf">règlement du concours</a> et je
                             confirme avoir atteint
@@ -321,17 +330,22 @@
                 </div>
                 <div class="documentation">
                     <p>
-                        <input type="checkbox" id="confirme" name="confirme" value="confirme" />
-                        <label for="confirme">Oui, j’accepte de recevoir de la documentation de Radio- Canada.</label>
+                        <input type="checkbox" id="documentation" name="documentation" value="documentation">
+                        <label for="documentation">Oui, j’accepte de recevoir de la documentation de Radio-
+                            Canada.</label>
                     </p>
                 </div>
-                <input type="submit" value="Envoyer">
+                <p class="soumission">
+                    <button>Soummettre le formulaire</button>
+                </p>
             </form>
-        </section>
-    </main>
-    <footer>
-        <p><strong class="credit">©2021, Louis-Philippe Roy.</strong><br>
-            Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</p>
+        </main>
+    </div>
+    <footer role="contentinfo">
+        <p class="credits">
+            <strong>©2021, Louis-Philippe Roy.</strong><br>
+            Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.
+        </p>
     </footer>
 
 </body>

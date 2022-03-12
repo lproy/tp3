@@ -12,14 +12,14 @@
 
 /*** Classes pour dimensionner les blocs ***/
 @media (min-width: 600px) {
-
-    /*** Classe de base pour l'intégration en flexbox ***/
     .rangee{
         display:flex;
         justify-content: space-between;
         align-items:stretch; /* valeur par défaut */
         flex-wrap: wrap;
     }
+    /*** Classe de base pour l'intégration en flexbox ***/
+
 
     .cols_1_de_12 {
         flex-basis: 6.5%;
